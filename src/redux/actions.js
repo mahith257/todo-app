@@ -1,0 +1,4 @@
+export const ADD_TODO = "ADD_TODO"
+export const TOGGLE_COMPLETED = "TOGGLE_COMPLETED"
+export const DELETED_TODO = "DELETED_TODO"
+export const IMPORTANT_TODO = "IMPORTANT_TODO"

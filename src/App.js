@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import { makeStyles, Container, Paper } from '@material-ui/core'
+import TodoAdder from './components/TodoAdder';
+import AllTodos from './components/AllTodos';
+
+const useStyles = makeStyles((theme) => ({
+  appContainer: {
+    paddingLeft: 100,
+    paddingRight: 100,
+    marginTop: "100px",
+    width: '100%',
+    textAlign: 'center'
+  },
+  wrapper: {
+    width: "100%",
+    textAlign: 'center'
+  }
+}))
 
 function App() {
+  const classes = useStyles()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Container className = {classes.appContainer}>
+          <TodoAdder />
+          <AllTodos />
+      </Container>
     </div>
   );
 }
